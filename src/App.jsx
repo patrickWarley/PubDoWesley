@@ -1,11 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import { Outlet } from 'react-router-dom';
+
+import Navbar from './assets/Components/Navbar';
+import Footer from './assets/Components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1 style={{color:"red", textAlign:"center"}}>PubDoWesley</h1>
+    <>
+      <Navbar/>
+      <main className='min-vh-100'>
+        <Outlet/>
+      </main>
+      <Footer/>
+    </>
   )
 }
 

@@ -1,0 +1,39 @@
+:root{
+  --dark-background: #000000;
+  --light-text:#ffffff;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+.dark-background{
+  background-color: var(--dark-background);
+}
+
+.light-text{
+  color: var(--light-text)!important;
+}
+
+.link-redes:hover{
+  color:red !important;
+  transform: scale(1.2);
+}
+
+.background-parallax{
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grayscale{
+  filter: brightness(70%)
+}
+
+.main-title{
+  font-size: 5em;
+  font-weight: bold;
+  text-shadow: 7px 2px 5px rgba(00, 00, 00, 0.91);
+}
