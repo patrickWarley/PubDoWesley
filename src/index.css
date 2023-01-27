@@ -28,6 +28,11 @@
     background-size: cover;
 }
 
+.contato-form label{
+  color: white;
+  font-weight: bolder;
+}
+
 .grayscale{
   filter: brightness(70%)
 }
@@ -36,4 +41,30 @@
   font-size: 5em;
   font-weight: bold;
   text-shadow: 7px 2px 5px rgba(00, 00, 00, 0.91);
+}
+
+.bg-header-contato{
+  background-image: url('./assets/images/fundo-contato.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 600px;
+  background-position: 0 -120px;
+}
+
+/*Nav bar*/
+.sm-navbar-brand {
+  display: none;
+}
+
+.sm-navbar-toggler {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .sm-navbar-brand {
+    display: block;
+  }
+
+  .sm-navbar-toggler{
+    display: block;
+  }
 }
