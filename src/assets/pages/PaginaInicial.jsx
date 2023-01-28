@@ -5,14 +5,12 @@ import AnimatedGallery from '../Components/AnimatedGallery';
 
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
 
-import food from '../images/food/food.jpg';
-import food2 from '../images/food/food2.jpg';
 import food3 from '../images/food/food3.jpg';
 import food4 from '../images/food/food4.jpg';
 import food5 from '../images/food/food5.jpg';
 import food6 from '../images/food/food6.jpg';
 
-const images = [food, food2, food3, food4, food5, food6];
+const images = [food3, food4, food5, food6];
 
 function PaginaInicial() {
   return (

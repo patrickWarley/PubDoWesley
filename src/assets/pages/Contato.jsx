@@ -2,14 +2,14 @@ import PlanoDeFundoTopo from '../images/fundo-contato.jpg';
 
 function Contato(props) {
   return (
-    <section {...props} className=' vw-100' id="contato">
+    <section {...props} className='vw-100' id="contato">
       <div className="d-flex bg-header-contato" style={{ height: '300px' }}>
         <span className="m-auto fs-1 light-text" style={{ fontWeight: 'bold', textShadow: '4px 4px 0px #000000' }}>Fale com a gente</span>
       </div>
 
-      <div className="vw-100 row">
+      <div className="vw-100 row m-0">
 
-        <div className="row col-md" style={{ backgroundColor: 'gray' }}>
+        <div className="col-md-6" style={{ backgroundColor: 'gray' }}>
           <div className="">
             <form className="m-5 contato-form">
               <div className="mb-3">
@@ -29,9 +29,9 @@ function Contato(props) {
           </div>
         </div>
 
-        <div className="row col-md mb-5">
-          <h2 className="mt-5 mb-2 mx-5">Horario de funcionamento</h2>
-          <p className="my-2 mx-5">
+        <div className="col-md-6 p-5">
+          <h2 className="">Horario de funcionamento</h2>
+          <p className="">
             De terça e quarta, das 16h portaria fecha 00h <br />
             Quinta, sexta e véspera feriados, das 16h portaria fecha 1h30 <br />
             Sábado, das 16h portaria fecha 1h30 <br />
@@ -39,8 +39,8 @@ function Contato(props) {
             Feriados, abre 16h e fecha de acordo com o dia da semana. <br />
           </p>
 
-          <h2 className="mt-5 mb-2 mx-5">Telefones</h2>
-          <p className="my-2 mx-5">
+          <h2 className="">Telefones</h2>
+          <p className="">
             ++55 (21)99999-9999 <br />
             ++55 (21)99999-9999 <br />
             ++55 (21)99999-9999 <br />
