@@ -84,7 +84,7 @@ function Products(){
           <div>Carregando...</div>
         )}
       </div>
-      <h2 className="tituloProduto">Drinks</h2>
+      <h2 className="tituloProduto">Drinques</h2>
       <div >
         {coqueteis ? (
 
