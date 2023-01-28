@@ -67,3 +67,18 @@ nav.bg-dark{
       font-size: 2em;
     }
 }
+
+.form-container{
+  margin-top: 1%;
+}
+
+.Cadastramento{
+  border-radius: 10px;
+  width: 60%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 20%;
+  border: none;
+  box-shadow: black 0px 0px 5px 0px;
+  padding: 1rem;
+}
