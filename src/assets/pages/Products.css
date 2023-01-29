@@ -17,6 +17,10 @@
   background-color: black;
 }
 
+.products-list {
+  padding: 50px;
+}
+
 .product-card {
   min-width: 200px;
   min-height: 300px;
