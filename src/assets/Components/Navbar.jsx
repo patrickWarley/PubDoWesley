@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
+import UserMenu from "./UserMenu";
 function Navbar() {
-
-  const [sticky, setSticky] = useState(false);
+  const myRef = useRef(null);
 
   function handleScroll(evt) {
     //essa variavel salva em que posição nos estamos
     let windowHeight = window.scrollY;
+    let classList = myRef.current.classList;
 
-    if (windowHeight > 500) setSticky(true);
-    else {
-      if (sticky) setSticky(false);
+    if (windowHeight > 500) {
+      classList.add("scrollNavbar");
+    } else {
+      classList.remove("scrollNavbar");
     }
 
   }
@@ -21,17 +23,17 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark bg-dark p-4 ${sticky ? "position-fixed" : "position-absolute"} vw-100`} style={{ zIndex: 99999 }}>
+    <nav className={`navbar navbar-expand-lg navbar-dark bg-light p-4 position-fixed vw-100`}
+      style={{ zIndex: 99999, boxShadow: "10px 2px 5px 0px rgba(0,0,0,0.75)" }}
+      ref={myRef}
+    >
       <div className="container-fluid">
-        <div className="d-flex col-12 col-lg justify-content-between">
-          <a className="navbar-brand" href="#">Pub Do Wesley</a>
-          <button className="navbar-toggler hambumguer-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+        <div className="d-flex col justify-content-between order-1">
+          <a className="navbar-brand" href="/">Pub Do Wesley</a>
         </div>
 
-        <div className="collapse navbar-collapse col-lg" id="navbarSupportedContent">
-          <ul className="d-flex navbar-nav mt-5 mt-lg-0 mb-2 mb-lg-0 me-auto align-items-center bigger-text">
+        <div className="collapse navbar-collapse justify-content-center col order-3 order-lg-2" id="navbarSupportedContent">
+          <ul className="d-flex navbar-nav mt-5 mt-lg-0 mb-2 mb-lg-0 align-items-center bigger-text wood-text">
 
             <div className="d-lg-flex">
               <li className="nav-item m-2">
@@ -43,7 +45,7 @@ function Navbar() {
               </li>
 
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" href="/cardapio">Cardapio</a>
+                <a className="nav-link fs-5 fw-bolder" href="/cardapio">Produtos</a>
               </li>
 
               <li className="nav-item m-2">
@@ -51,18 +53,24 @@ function Navbar() {
               </li>
             </div>
           </ul>
+        </div>
 
-          <div className="d-block">
-            <ul className="d-flex navbar-nav mb-2 mb-lg-0">
-              <li className="nav-item m-xs-2 inline-block">
-                <a className="nav-link" href="#"> Cadastro </a>
-              </li>
+        <div className="col order-2 order-lg-3 d-flex justify-content-end">
+          <ul className="d-flex flex-row align-items-center navbar-nav">
 
-              <li className="nav-item m-2 m-md-0 inline-block">
-                <a className="nav-link" href="#"> Login </a>
-              </li>
-            </ul>
-          </div>
+            <li className="nav-item px-2">
+            </li>
+
+            <li className="nav-item px-2">
+              <UserMenu />
+            </li>
+
+            <li className="nav-item px-2">
+              <button className="navbar-toggler hambumguer-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>

@@ -27,31 +27,25 @@ function PaginaInicial() {
 
       <AnimatedBanner>
         <div className='fs-1 text-center section-title light-text mb-5 fw-bolder'>
-          <span>Vai uma cervejinha...</span>
+          <span>Ode Ao Álcool...</span>
         </div>
 
         <div className='fs-4 text-center px-2 '>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed in est vitae velit mattis scelerisque non ac felis.
-          </p>
+          <p>"Mas o que eu não posso, é ficar sem pinga no rim!</p>
+          <p>Mas é o que eu não quero, nem tô a fim.</p>
 
-          <p>
-            Duis commodo auctor ipsum vel hendrerit.
-            Nulla vitae dui eget urna rutrum ultricies efficitur at nulla.
-            Sed lobortis sapien eget turpis sagittis fringilla. Maecenas auctor varius neque non mattis.
-          </p>
-
-          <p>
-            Integer egestas metus ut consequat porttitor. Etiam posuere risus odio, in feugiat magna vehicula at. Duis id auctor turpis. lobortis.
-          </p>
+          <p>Já dizia um velho amigo meu,</p>
+          <p>Louco é o homem que nunca bebeu,</p>
+          <p>e depois de trabalhar,</p>
+          <p>vou sair, correr pro bar,</p>
+          <p>não me espere pro jantar,..."</p>
         </div>
         <div className="container d-flex justify-content-center">
           <Button className="rounded mt-5 py-2 px-4 fs-5 fw-bold" text="Delivery" />
         </div>
-      </AnimatedBanner>
+      </AnimatedBanner >
       <Contato />
-    </section>
+    </section >
   );
 }
 
