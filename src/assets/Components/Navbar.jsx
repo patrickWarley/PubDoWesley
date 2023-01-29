@@ -35,7 +35,7 @@ function Navbar() {
 
             <div className="d-lg-flex">
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" aria-current="page" href="#">Home</a>
+                <a className="nav-link fs-5 fw-bolder" aria-current="page" href="/">Home</a>
               </li>
 
               <li className="nav-item m-2">
@@ -43,11 +43,11 @@ function Navbar() {
               </li>
 
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" href="#">Cardapio</a>
+                <a className="nav-link fs-5 fw-bolder" href="/cardapio">Cardapio</a>
               </li>
 
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" href="#contato">Contato</a>
+                <a className="nav-link fs-5 fw-bolder" href="/#contato">Contato</a>
               </li>
             </div>
           </ul>

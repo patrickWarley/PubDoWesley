@@ -7,15 +7,20 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import PaginaInicial from './assets/pages/PaginaInicial';
+import Products from './assets/pages/Products';
 
 const router = createBrowserRouter([
   {
-    path:'/',
-    element: <App/>,
-    children:[
+    path: '/',
+    element: <App />,
+    children: [
       {
-        path:'/',
-        element:<PaginaInicial/>
+        path: '/',
+        element: <PaginaInicial />
+      },
+      {
+        path: '/cardapio',
+        element: <Products />
       }
     ]
   }
@@ -23,6 +28,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

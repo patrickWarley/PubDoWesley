@@ -1,7 +1,6 @@
 import Button from '../Components/Button';
 import AnimatedBanner from '../Components/AnimatedBanner';
 import Contato from './Contato';
-import Products from './Products';
 import AnimatedGallery from '../Components/AnimatedGallery';
 
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
@@ -51,7 +50,6 @@ function PaginaInicial() {
           <Button className="rounded mt-5 py-2 px-4 fs-5 fw-bold" text="Delivery" />
         </div>
       </AnimatedBanner>
-      <Products />
       <Contato />
     </section>
   );
