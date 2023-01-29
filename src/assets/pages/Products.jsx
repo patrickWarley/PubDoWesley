@@ -33,32 +33,33 @@ function Products() {
   }, [])
 
   return (
-    <div className="produtos container-fluid">
-      <div>
-        <h2 className="tituloProduto light-text" id="produtos">Cervejas</h2>
-        <div >
-          {cervejas ? (
+    <div className="products-page p-5">
+      <div className="text-center header-produtos d-flex align-items-end justify-content-center p-5">
+        <h1 className='wood-text header-titulo fw-bolder'>Escolha seu veneno</h1>
+      </div>
+      <h2 className="tituloProduto light-text" id="produtos">Cervejas</h2>
+      <div >
+        {cervejas ? (
 
-            <div className='content product-grid'>
+          <div className='content product-grid'>
 
-              {cervejas.map(cerveja => (
-                <div className="product-card light-text" key={cerveja.id}>
-                  <div className="card-img">
-                    <img src={cerveja.imagem} alt="My Image" />
-                  </div>
-                  <div>
-                    <h3>{cerveja.nome}</h3>
-                    <p>Unidade: {cerveja.unidade}</p>
-                    <p className="price">Preço: {cerveja.preco}</p>
-                    <button>Adicionar ao carrinho</button>
-                  </div>
+            {cervejas.map(cerveja => (
+              <div className="product-card light-text" key={cerveja.id}>
+                <div className="card-img">
+                  <img src={cerveja.imagem} alt="My Image" />
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div>Carregando...</div>
-          )}
-        </div>
+                <div>
+                  <h3>{cerveja.nome}</h3>
+                  <p>Unidade: {cerveja.unidade}</p>
+                  <p className="price">Preço: {cerveja.preco}</p>
+                  <button>Adicionar ao carrinho</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div>Carregando...</div>
+        )}
       </div>
       <h2 className="tituloProduto light-text">Destilados</h2>
       <div >
@@ -108,7 +109,7 @@ function Products() {
           <div>Carregando...</div>
         )}
       </div>
-    </div>
+    </div >
   );
 }
 

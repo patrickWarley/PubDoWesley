@@ -113,8 +113,8 @@ nav .nav-tabs .active {
 .bg-header-contato {
   background-image: url('./assets/images/fundo-contato.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 600px;
-  background-position: 0 -120px;
+  background-size: 100%;
+  z-index: -1;
 }
 
 @media(max-width:992px) {
@@ -136,4 +136,15 @@ nav .nav-tabs .active {
 
 .modal-content {
   background-color: var(--shade-3) !important;
+}
+
+.grid-overlay-children {
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+@media(max-width:992px) {
+  .contato-form {
+    background-color: var(--shade-3);
+  }
 }

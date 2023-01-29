@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import UserMenu from "./UserMenu";
 function Navbar() {
   const myRef = useRef(null);
+  const location = useLocation();
 
   function handleScroll(evt) {
     //essa variavel salva em que posição nos estamos
@@ -29,7 +31,7 @@ function Navbar() {
     >
       <div className="container-fluid">
         <div className="d-flex col justify-content-between order-1">
-          <a className="navbar-brand" href="/">Pub Do Wesley</a>
+          <Link className="navbar-brand" to={'/'}>Pub Do Wesley</Link>
         </div>
 
         <div className="collapse navbar-collapse justify-content-center col order-3 order-lg-2" id="navbarSupportedContent">
@@ -37,19 +39,31 @@ function Navbar() {
 
             <div className="d-lg-flex">
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" aria-current="page" href="/">Home</a>
+                <Link className="nav-link fs-5 fw-bolder" to={'/'}>
+                  Home
+                </Link>
               </li>
 
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" href="#">Quem Somos</a>
+                {
+                  location.pathname !== '/' ?
+                    <Link className="nav-link fs-5 fw-bolder" to={'/#quemsomos'}>Quem Somos</Link>
+                    :
+                    <a className="nav-link fs-5 fw-bolder" href="#quemsomos">Quem Somos</a>
+                }
               </li>
 
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" href="/cardapio">Produtos</a>
+                <Link to={'/produtos'} className="nav-link fs-5 fw-bolder">Produtos</Link>
               </li>
 
               <li className="nav-item m-2">
-                <a className="nav-link fs-5 fw-bolder" href="/#contato">Contato</a>
+                {
+                  location.pathname !== '/' ?
+                    <Link className="nav-link fs-5 fw-bolder" to={'/#contato'}>Contato</Link>
+                    :
+                    <a className="nav-link fs-5 fw-bolder" href="#contato">Contato</a>
+                }
               </li>
             </div>
           </ul>

@@ -5,6 +5,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import PaginaInicial from './assets/pages/PaginaInicial';
@@ -20,12 +21,12 @@ const router = createBrowserRouter([
         element: <PaginaInicial />
       },
       {
-        path: '/cardapio',
+        path: '/produtos',
         element: <Products />
       }
     ]
   }
-])
+], { basename: "/PubDoWesley/" })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
