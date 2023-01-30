@@ -10,6 +10,8 @@
   - React
     - React Router
     - Json-server
+    - React-hook-form
+    - Axios
   
   - Bootstrap
 
