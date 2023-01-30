@@ -2,7 +2,7 @@ import Button from '../Components/Button';
 import AnimatedBanner from '../Components/AnimatedBanner';
 import Contato from './Contato';
 import AnimatedGallery from '../Components/AnimatedGallery';
-
+import LogoShadow from '../Components/Logo/LogoShadow';
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
 
 import food3 from '../images/food/food3.jpg';
@@ -19,7 +19,9 @@ function PaginaInicial() {
         <div className="container-fluid background-parallax position-absolute grayscale" style={{ backgroundImage: `url(${BackgroundImage})` }}>
         </div>
         <div className="d-flex min-vh-100 container-fluid position-absolute " style={{}}>
-          <div className='m-auto'><span className='main-title light-text'> Pub do Wesley</span></div>
+          <div className="m-auto">
+            <LogoShadow className="me-auto" color={'#ffffff'} width={'500px'} height={'500px'} />
+          </div>
         </div>
       </div>
 

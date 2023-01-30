@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import Button from "../Components/Button";
 import Cadastro from "../Components/Cadastro/Cadastro";
-import MockLogIn from "../Components/MockLogIn";
+import LogIn from "../Components/LogIn";
 
 function AcessoUsuario() {
   const [currentElement, setCurrentElement] = useState(<Cadastro />);
@@ -21,7 +21,7 @@ function AcessoUsuario() {
 
     cadastroTab.current.classList.remove('active');
     logTab.current.classList.add('active');
-    setCurrentElement(< MockLogIn />);
+    setCurrentElement(< LogIn />);
   }
 
   return (

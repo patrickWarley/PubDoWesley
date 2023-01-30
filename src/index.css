@@ -11,9 +11,11 @@
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  /*background: #000 !important;
-      color: #0f0 !important;
-      outline: solid #f00 1px !important;*/
+  /*
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+  */
 }
 
 #root {
@@ -138,6 +140,11 @@ nav .nav-tabs .active {
   background-color: var(--shade-3) !important;
 }
 
+.grid-overlay-parent {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .grid-overlay-children {
   grid-row-start: 1;
   grid-column-start: 1;
@@ -148,3 +155,52 @@ nav .nav-tabs .active {
     background-color: var(--shade-3);
   }
 }
+
+/*Login*/
+.disabled {
+  opacity: 0.5;
+}
+
+.login-container {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #8d5436;
+  padding: 20px;
+}
+
+.login-container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.login-container input[type='text'],
+.login-container input[type='password'] {
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.login-container button[type='submit'] {
+  padding: 10px 20px;
+  background-color: white;
+  color: #9e7575;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/*Login*/

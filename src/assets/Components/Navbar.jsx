@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import LogoShadow from "./Logo/LogoShadow";
+
 import UserMenu from "./UserMenu";
 function Navbar() {
   const myRef = useRef(null);
@@ -31,7 +33,11 @@ function Navbar() {
     >
       <div className="container-fluid">
         <div className="d-flex col justify-content-between order-1">
-          <Link className="navbar-brand" to={'/'}>Pub Do Wesley</Link>
+          <Link className="navbar-brand" to={'/'}>
+            <div className="">
+              <LogoShadow color={'#ffffff'} width={'50px'} height={'50px'} />
+            </div>
+          </Link>
         </div>
 
         <div className="collapse navbar-collapse justify-content-center col order-3 order-lg-2" id="navbarSupportedContent">
