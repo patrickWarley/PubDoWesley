@@ -4,7 +4,6 @@ import Contato from './Contato';
 import AnimatedGallery from '../Components/AnimatedGallery';
 import LogoShadow from '../Components/Logo/LogoShadow';
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
-import QuemSomos from './QuemSomos';
 
 import food3 from '../images/food/food3.jpg';
 import food4 from '../images/food/food4.jpg';
@@ -47,8 +46,6 @@ function PaginaInicial() {
           <Button className="rounded mt-5 py-2 px-4 fs-5 fw-bold" text="Delivery" />
         </div>
       </AnimatedBanner >
-
-      <QuemSomos />
 
       <Contato />
     </section >
