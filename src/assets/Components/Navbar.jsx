@@ -27,7 +27,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark bg-light p-4 position-fixed vw-100`}
+    <nav className={`navbar navbar-expand-lg navbar-dark bg-light p-0 position-fixed vw-100`}
       style={{ zIndex: 99999, boxShadow: "10px 2px 5px 0px rgba(0,0,0,0.75)" }}
       ref={myRef}
     >
@@ -35,7 +35,7 @@ function Navbar() {
         <div className="d-flex col justify-content-between order-1">
           <Link className="navbar-brand" to={'/'}>
             <div className="">
-              <LogoShadow color={'#ffffff'} width={'50px'} height={'50px'} />
+              <LogoShadow className="LogoNavbar" color={'#ffffff'} />
             </div>
           </Link>
         </div>
@@ -81,7 +81,7 @@ function Navbar() {
             <li className="nav-item px-2">
             </li>
 
-            <li className="nav-item px-2">
+            <li className="nav-item px-4">
               <UserMenu />
             </li>
 

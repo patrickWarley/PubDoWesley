@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import Button from '../Components/Button';
 import AnimatedBanner from '../Components/AnimatedBanner';
 import Contato from './Contato';
@@ -16,12 +18,23 @@ function PaginaInicial() {
   return (
     <section>
       <div className='position-relative min-vh-100' style={{ zIndex: -1 }}>
-        <div className="container-fluid background-parallax position-absolute grayscale" style={{ backgroundImage: `url(${BackgroundImage})` }}>
-        </div>
-        <div className="d-flex min-vh-100 container-fluid position-absolute " style={{}}>
-          <div className="m-auto">
-            <LogoShadow className="me-auto" color={'#ffffff'} width={'500px'} height={'500px'} />
-          </div>
+        <motion.div className="container-fluid background-parallax position-absolute grayscale"
+          initial={{ transform: 'scale(1.3)' }}
+          animate={{ transform: 'scale(1)' }}
+          transition={{ duration: 3 }}
+          style={{ backgroundImage: `url(${BackgroundImage})` }}>
+        </motion.div>
+
+        <div className="d-flex flex-column min-vh-100 container-fluid position-absolute align-items-center justify-content-center ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 3 }}
+            className="d-inline-block">
+            <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />
+          </motion.div>
+
+          <Button text='Delivery' className='d-block mt-5 py-2 px-3' style={{ width: '9em' }} />
         </div>
       </div>
 

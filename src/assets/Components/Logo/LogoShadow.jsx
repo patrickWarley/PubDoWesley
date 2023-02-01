@@ -2,12 +2,16 @@ import Logo from "./Logo";
 function LogoShadow(props) {
   return (
     <div className={`${props.className} grid-overlay-parent`} >
+
       <Logo className='logo p-0 grid-overlay-children'
-        style={{ maxWidth: props.width, maxHeight: props.height, transform: "translate(10px)" }}
-        color={props.color} width={props.width} />
+        style={{ transform: "translate(10px)" }}
+        color={props.color}
+      />
+
       <Logo className='logo p-0 grid-overlay-children'
-        style={{ maxWidth: props.width, maxHeight: props.height }}
-        color={"#000"} width={props.width} />
+        style={{}}
+        color={"#000"} />
+
     </div >
   );
 }
