@@ -14,10 +14,11 @@ import food6 from '../images/food/food6.jpg';
 
 const images = [food3, food4, food5, food6];
 
+
 function PaginaInicial() {
   return (
     <section>
-      <div className='position-relative min-vh-100' style={{ zIndex: -1 }}>
+      <div className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
         <motion.div className="container-fluid background-parallax position-absolute grayscale"
           initial={{ transform: 'scale(1.3)' }}
           animate={{ transform: 'scale(1)' }}
@@ -31,10 +32,10 @@ function PaginaInicial() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 3 }}
             className="d-inline-block">
-            <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />
+            <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />  
           </motion.div>
 
-          <Button text='Delivery' className='d-block mt-5 py-2 px-3' style={{ width: '9em' }} />
+          <Button text='Delivery' className='mt-5 main-bold-font fs-5 d-block py-1 px-1 border-0 delivery-button' />
         </div>
       </div>
 
@@ -56,7 +57,7 @@ function PaginaInicial() {
           <p>não me espere pro jantar,..."</p>
         </div>
         <div className="container d-flex justify-content-center">
-          <Button className="rounded mt-5 py-2 px-4 fs-5 fw-bold" text="Delivery" />
+          <Button className="main-bold-font rounded mt-5 py-2 px-4 fs-5 fw-bold delivery-button" text="Delivery" />
         </div>
       </AnimatedBanner >
 

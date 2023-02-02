@@ -27,7 +27,7 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark bg-light p-0 position-fixed vw-100`}
+    <nav className={`main-bold-font navbar navbar-expand-lg navbar-dark bg-light p-0 position-fixed vw-100`}
       style={{ zIndex: 99999, boxShadow: "10px 2px 5px 0px rgba(0,0,0,0.75)" }}
       ref={myRef}
     >
