@@ -12,7 +12,21 @@ import food4 from '../images/food/food4.jpg';
 import food5 from '../images/food/food5.jpg';
 import food6 from '../images/food/food6.jpg';
 
-const images = [food3, food4, food5, food6];
+const images = [
+  {
+    image: food3, 
+    text:'Beber e não ter a vergonha de ser feliz ...'
+  },{
+    image:food4,
+    text:'Cantar e Cantar e Cantar a beleza de ser um eterno infeliz ...'
+  },{
+    image:food5,
+    text:'Não tem comida ...'
+  },{
+    image:food6,
+    text: 'Serio, não tem...'
+  }
+];
 
 
 function PaginaInicial() {
@@ -34,12 +48,18 @@ function PaginaInicial() {
             className="d-inline-block">
             <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />  
           </motion.div>
-
-          <Button text='Delivery' className='mt-5 main-bold-font fs-5 d-block py-1 px-1 border-0 delivery-button' />
+          
+          <motion.div
+          initial={{transform:'translate(1000px)'}}
+          animate={{transform:'translate(0px)'}}
+          transition={{delay:3, duration:1}}>
+            <Button text='Delivery' className='mt-5 main-bold-font fs-5 d-block py-1 px-1 border-0 delivery-button' />
+          </motion.div>
+        
         </div>
       </div>
 
-      <AnimatedGallery images={images} />
+      <AnimatedGallery id="galery" images={images} />
 
       <AnimatedBanner>
         <div className='fs-1 text-center section-title light-text mb-5 fw-bolder'>

@@ -1,11 +1,13 @@
-function AnimatedGallery({ images }) {
+import ImageWithText from "./ImageWithText";
+
+function AnimatedGallery({ images,id }) {
   return (
-    <section className="container-fluid p-0 dark-background">
-      {
-        images.map(image => (
-          <img src={image} className="w-50" />
-        ))
-      }
+    <section id={id} className="container-fluid p-0 dark-background">
+      <div className="image-grid">
+        {
+          images.map(image => (<ImageWithText image={image.image} text={image.text} className="text-center"/>))
+        }
+      </div>
     </section>
   )
 

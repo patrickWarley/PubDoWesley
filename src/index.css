@@ -234,4 +234,20 @@ nav .nav-tabs .active {
   cursor: pointer;
 }
 
-/*Login*/
+/*Gallery*/
+
+.image-with-overlay:hover + p.overlay-image{
+  margin-top: -5em;
+  color:var(--light-text);
+  text-shadow: 8px 5px 5px rgba(00, 00, 00, 0.91);
+  display: block!important;
+}
+
+.overlay-image{
+  display: none;
+}
+
+.image-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));;
+}
