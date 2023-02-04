@@ -6,11 +6,13 @@ import Contato from './Contato';
 import AnimatedGallery from '../Components/AnimatedGallery';
 import LogoShadow from '../Components/Logo/LogoShadow';
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
+import Equipe from "./Equipe";
 
 import food3 from '../images/food/food3.jpg';
 import food4 from '../images/food/food4.jpg';
 import food5 from '../images/food/food5.jpg';
 import food6 from '../images/food/food6.jpg';
+
 
 const images = [
   {
@@ -80,7 +82,7 @@ function PaginaInicial() {
           <Button className="main-bold-font rounded mt-5 py-2 px-4 fs-5 fw-bold delivery-button" text="Delivery" />
         </div>
       </AnimatedBanner >
-
+      <Equipe/>
       <Contato />
     </section >
   );
