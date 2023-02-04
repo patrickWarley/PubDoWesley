@@ -10,7 +10,7 @@
   --shade-3-transparency: rgb(141, 85, 53, 0.8);
 }
 
-.main-bold-font{
+.main-bold-font {
   font-family: 'Antonio';
 }
 
@@ -30,12 +30,12 @@
 
 /*NAVBAR*/
 
-.LogoNavbar svg{
-  width: 100px!important;
-  height: 100px!important;
+.LogoNavbar svg {
+  width: 100px !important;
+  height: 100px !important;
 }
 
-.LogoHero svg{
+.LogoHero svg {
   width: 400px;
   height: 300px;
 }
@@ -173,17 +173,17 @@ nav .nav-tabs .active {
 }
 
 
-.delivery-button{
-  width: 9em!important;
-  height: 3em!important;
+.delivery-button {
+  width: 9em !important;
+  height: 3em !important;
   color: var(--shade-1);
-  background-color: var(--light-text)!important;
+  background-color: var(--light-text) !important;
   border: 0;
 }
 
-.delivery-button:hover{
-  color: var(--light-text)!important;
-  background-color: var(--shade-1)!important;
+.delivery-button:hover {
+  color: var(--light-text) !important;
+  background-color: var(--shade-1) !important;
 }
 
 
@@ -236,27 +236,43 @@ nav .nav-tabs .active {
 
 /*Gallery*/
 
-.image-with-overlay:hover + p.overlay-image{
+.image-with-overlay:hover+p.overlay-image {
   margin-top: -5em;
-  color:var(--light-text);
+  color: var(--light-text);
   text-shadow: 8px 5px 5px rgba(00, 00, 00, 0.91);
-  display: block!important;
+  display: block !important;
 }
 
-.overlay-image{
+.overlay-image {
   display: none;
 }
 
-.image-grid{
+.image-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(250px, 1fr));;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
 }
 
 /*Equipe*/
-.card-equipe{
-  box-shadow: black 0px 0px 5px 0px;
+.image-shadow {
+  box-shadow: black 10px 10px 50px 0px;
 }
 
-.card-equipe:hover{
-  transform:scale(1.1);
+.card-equipe:hover {
+  transform: scale(1.1);
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-equipe img {
+  width: 15em;
+  height: 15em;
+}
+
+
+.circle {
+  border-radius: 50% !important;
 }
