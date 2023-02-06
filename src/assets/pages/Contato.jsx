@@ -3,7 +3,7 @@ import Button from '../Components/Button';
 
 function Contato(props) {
   return (
-    <section {...props} className='vw-100 d-grid' style={{ minHeight: '100vh', gridTemplateColumns: '1fr' }} id="contato">
+    <section {...props} className='d-grid' style={{ minHeight: '100vh', gridTemplateColumns: '1fr' }} id="contato">
       <div className="d-flex bg-header-contato grid-overlay-children"></div>
       <div className="d-flex grid-overlay-children" style={{ backgroundColor: '#1c0c03', opacity: '80%', zIndex: '-1' }}></div>
       <div className="d-flex flex-column grid-overlay-children" style={{ backgroundColor: "transparent" }}>

@@ -8,6 +8,8 @@ import LogoShadow from '../Components/Logo/LogoShadow';
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
 import Equipe from "./Equipe";
 
+import {calcWidthNoScrollBar} from '../util/util';
+
 import food3 from '../images/food/food3.jpg';
 import food4 from '../images/food/food4.jpg';
 import food5 from '../images/food/food5.jpg';
@@ -32,8 +34,9 @@ const images = [
 
 
 function PaginaInicial() {
+  calcWidthNoScrollBar();
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
         <motion.div className="container-fluid background-parallax position-absolute grayscale"
           initial={{ transform: 'scale(1.3)' }}
@@ -42,7 +45,7 @@ function PaginaInicial() {
           style={{ backgroundImage: `url(${BackgroundImage})` }}>
         </motion.div>
 
-        <div className="d-flex flex-column min-vh-100 container-fluid position-absolute align-items-center justify-content-center ">
+        <div className="overflow-hidden d-flex flex-column min-vh-100 container-fluid position-absolute align-items-center justify-content-center ">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -52,6 +55,7 @@ function PaginaInicial() {
           </motion.div>
           
           <motion.div
+          className="overflow-hidden"
           initial={{transform:'translate(1000px)'}}
           animate={{transform:'translate(0px)'}}
           transition={{delay:3, duration:1}}>

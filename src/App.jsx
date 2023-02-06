@@ -6,13 +6,13 @@ import Footer from './assets/Components/Footer';
 
 function App() {
   return (
-    <>
+    <div>
       <Navbar/>
       <main className='min-vh-100'>
         <Outlet/>
       </main>
       <Footer/>
-    </>
+    </div>
   )
 }
 
