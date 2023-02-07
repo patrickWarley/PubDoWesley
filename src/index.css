@@ -39,8 +39,10 @@
 /*NAVBAR*/
 
 .LogoNavbar svg {
-  width: 100px !important;
-  height: 100px !important;
+  max-width: 400px !important;
+  max-height: 400px !important;
+  transition: max-height 1s ease-in-out;
+  transition: max-width 1s ease-in-out;
 }
 
 .LogoHero{
@@ -78,17 +80,28 @@ nav.bg-light {
   background-color: var(--shade-3-transparency) !important;
 }
 
+nav.navbar{
+  max-height: 200px!important;
+  transition: max-height 1s ease-in-out;
+}
+
 @media(min-width:992px) {
 
   nav {
-    transition: background-color 2s ease !important;
+    transition: all 2s ease !important;
   }
 
   nav.navbar.scrollNavbar {
     padding: 0 !important;
     margin: 0 !important;
     background-color: var(--shade-2) !important;
+    max-height: 50px!important;
   }
+
+  nav.navbar.scrollNavbar  .LogoNavbar svg {
+      max-height: 50px!important;
+      max-width: 50px!important;
+    }
 }
 
 .navbar-nav .dropdown-menu {

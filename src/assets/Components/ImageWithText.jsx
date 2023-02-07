@@ -6,7 +6,7 @@ function ImageWithText({image, text, className}){
   const inView = useInView(ref,{amount:0.3, once:true});
   
   return(
-    <motion.div 
+    <div 
       ref={ref}
       className={` ${className}`}
 
@@ -17,7 +17,7 @@ function ImageWithText({image, text, className}){
     >
       <img src={image} className={`image-with-overlay w-100`}/>
       <p className="overlay-image px-2 fs-md-2 fs-5 fw-bolder">{text}</p>
-    </motion.div>
+    </div>
   );
 }
 

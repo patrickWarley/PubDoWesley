@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 
+import Apresentacao from "./Apresentacao";
 import Button from '../Components/Button';
 import AnimatedBanner from '../Components/AnimatedBanner';
 import Contato from './Contato';
@@ -37,7 +38,6 @@ function PaginaInicial() {
   calcWidthNoScrollBar();
   return (
     <section className="overflow-hidden">
-      <Equipe />
       <div id="topo" className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
         <motion.div className="container-fluid background-parallax position-absolute grayscale"
           initial={{ transform: 'scale(1.3)' }}
@@ -66,6 +66,7 @@ function PaginaInicial() {
         </div>
       </div>
 
+      <Apresentacao/> 
       <AnimatedGallery id="galery" images={images} />
 
       <AnimatedBanner>
