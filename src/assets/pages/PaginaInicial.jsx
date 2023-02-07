@@ -37,7 +37,8 @@ function PaginaInicial() {
   calcWidthNoScrollBar();
   return (
     <section className="overflow-hidden">
-      <div className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
+      <Equipe />
+      <div id="topo" className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
         <motion.div className="container-fluid background-parallax position-absolute grayscale"
           initial={{ transform: 'scale(1.3)' }}
           animate={{ transform: 'scale(1)' }}

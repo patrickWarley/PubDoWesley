@@ -1,4 +1,30 @@
 import teamImage from '../images/team.png'
+import { motion } from 'framer-motion';
+
+const changeOpacity ={
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 20,
+    },
+  },
+  hidden:{
+    opacity:0
+  }
+}
+
+const changeColor ={
+  red:{
+    color:'red!important',
+    transition:{
+      duration:2
+    }
+  },
+  black:{
+    color:'black!important'
+  }
+}
 
 function Equipe() {
   const equipe = [
@@ -11,15 +37,23 @@ function Equipe() {
   ];
 
   return (
-    <section className="container-fluid d-flex justify-content-center bg-dark row overflow-hidden m-0">
-      <div className="col-lg-4 col-12 border border-1 text-light min-vh-100 overflow-hidden position-relative">
-        <div className="bg-light circle equipe-title text-center dark-text position-absolute top-25 translate-middle"></div>
-        Nosso time
-      </div>
-      <div className="col-lg-8 col-12 border border-3 team-grid ">
+    <motion.div 
+      initial="hidden"
+      animate="visible"
+      variants={changeOpacity}
+      className="container-fluid d-flex justify-content-center bg-dark row overflow-hidden m-0">
+      
+      <motion.div
+        initial='black'
+        animate='red' 
+        variants={changeColor}
+        className="text-center light-text p-5 fw-bolder main-title secondary-font">
+          Nosso time!
+        </motion.div>
+      <div className="col-12 team-grid ">
         {
           equipe.map(member => (
-            <div className="card-equipe m-2 m-md-3">
+            <div className="card-equipe m-5 m-md-3">
               <div className='image-equipe' style={{}}> <img src={member.imagem} className="image-shadow circle" /></div>
               <div className="rounded links position-relative" style={{ zIndex: 1 }} >
                 <div className="card-title light-text text-center">{member.nome}</div>
@@ -32,7 +66,7 @@ function Equipe() {
           ))
         }
       </div>
-    </section >
+    </motion.div >
   );
 }
 

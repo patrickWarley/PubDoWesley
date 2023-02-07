@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@900&display=swap');
 
 :root {
   --dark-background: #1C1A1D;
@@ -12,6 +13,10 @@
 
 .main-bold-font {
   font-family: 'Antonio';
+}
+
+.secondary-font{
+  font-family: 'Unbounded';
 }
 
 * {
@@ -142,6 +147,13 @@ nav .nav-tabs .active {
   font-size: 5em;
   font-weight: bold;
   text-shadow: 7px 2px 5px rgba(00, 00, 00, 0.91);
+}
+
+@media(max-width:600px){
+  .main-title{
+    font-size: 2em!important;
+    color: red;
+  }
 }
 
 .bg-header-contato {
