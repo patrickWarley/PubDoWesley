@@ -35,7 +35,7 @@ function Products() {
   return (
     <div className="products-page">
       <div className="text-center header-produtos d-flex align-items-end justify-content-center p-5">
-        <h1 className='wood-text header-titulo fw-bolder mb-5'>Escolha seu veneno</h1>
+        <h1 className='wood-text header-titulo fw-bolder mb-3'>Escolha seu veneno</h1>
       </div>
       <div className="products-list">
         <h2 className="tituloProduto light-text" id="produtos">Cervejas</h2>

@@ -10,18 +10,29 @@ function LogIn() {
     <div className='login-container'>
       <form>
         <h1>Login</h1>
-        <input
-          type='text'
-          placeholder='E-mail'
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
-          type='password'
-          placeholder='Senha'
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        
+        <div className="p-3 w-100">
+          <div className="col-12 mb-3">
+            <input
+              type='text'
+              placeholder='E-mail'
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="form-control"
+            />
+          </div>
+
+          <div className="col-12 mb-3">
+            <input
+              type='password'
+              placeholder='Senha'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="form-control"
+            />
+          </div>
+        </div>
+
         <button type='submit' disabled={isDisabled} className={isDisabled ? 'disabled' : ''}>
           Entrar
         </button>

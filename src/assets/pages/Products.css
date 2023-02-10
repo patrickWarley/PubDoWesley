@@ -18,7 +18,7 @@
 }
 
 .products-list {
-  padding: 50px;
+  padding: 0px 50px 50px 50px;
 }
 
 .product-card {
@@ -70,7 +70,7 @@
 .tituloProduto {
   text-align: center;
   font-size: 3.9em;
-  margin: 100px 0px 50px 0px;
+  margin: 50px 0px 50px 0px;
 }
 
 .product-grid {
@@ -92,7 +92,8 @@ div button {
   border-radius: 6px;
   border-color: grey;
   background-color: orange;
-  color: white;
+  padding: 1em;
+  color: black;
   font-weight: bold;
 }
 

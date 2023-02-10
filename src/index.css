@@ -8,7 +8,10 @@
   --shade-2: #332E27;
   --shade-3: #8D5535;
   --light-4: #d49774;
+  --light-5: #d17038;
   --shade-3-transparency: rgb(141, 85, 53, 0.8);
+
+  
 }
 
 .main-bold-font {
@@ -20,6 +23,7 @@
 }
 
 * {
+  font-family: 'Antonio';
   scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
@@ -217,9 +221,9 @@ nav .nav-tabs .active {
 .delivery-button {
   width: 9em !important;
   height: 3em !important;
-  color: var(--shade-1);
-  background-color: var(--light-text) !important;
-  border: 0;
+  color: var(--light-text);
+  background-color: var(--light-5) !important;
+  border: 1px solid var(--light-text);
 }
 
 .delivery-button:hover {
@@ -234,13 +238,9 @@ nav .nav-tabs .active {
 }
 
 .login-container {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #8d5436;
+  width: 100%;
+  height: 100%;
+  background-color: var(--shade-3);
   padding: 20px;
 }
 
@@ -257,18 +257,10 @@ nav .nav-tabs .active {
   color: white;
 }
 
-.login-container input[type='text'],
-.login-container input[type='password'] {
-  padding: 10px;
-  font-size: 18px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
 .login-container button[type='submit'] {
   padding: 10px 20px;
   background-color: white;
-  color: #9e7575;
+  color: var(--shade-3);
   border: none;
   border-radius: 5px;
   font-size: 18px;

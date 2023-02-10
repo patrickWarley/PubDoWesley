@@ -7,7 +7,7 @@ function FormPessoal() {
       <fieldset>
         <legend className="m-3">Informações pessoais</legend>
         <form onSubmit={Formulario} class="needs-validation" novalidate>
-          <div class="form-row p-5">
+          <div class="row p-5">
             <div class="col-12 mb-3">
               <label for="validationCustom01">Primeiro nome</label>
               <input type="text" class="form-control" id="validationCustom01" placeholder="Nome" required />

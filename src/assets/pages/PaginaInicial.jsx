@@ -9,8 +9,6 @@ import LogoShadow from '../Components/Logo/LogoShadow';
 import BackgroundImage from '../images/background-pagina-inicial.jpg';
 import Equipe from "./Equipe";
 
-import {calcWidthNoScrollBar} from '../util/util';
-
 import food3 from '../images/food/food3.jpg';
 import food4 from '../images/food/food4.jpg';
 import food5 from '../images/food/food5.jpg';
@@ -35,23 +33,20 @@ const images = [
 
 
 function PaginaInicial() {
-  calcWidthNoScrollBar();
   return (
     <section className="overflow-hidden">
-      <div id="topo" className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
-        <motion.div className="container-fluid background-parallax position-absolute grayscale"
-          initial={{ transform: 'scale(1.3)' }}
-          animate={{ transform: 'scale(1)' }}
-          transition={{ duration: 3 }}
-          style={{ backgroundImage: `url(${BackgroundImage})` }}>
-        </motion.div>
+      <div id="topo" className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>        
+        <div className="background-parallax container-fluid position-absolute grayscale"
+          style={{ backgroundImage: `url(${BackgroundImage})`}}>
+        </div>
 
         <div className="overflow-hidden d-flex flex-column min-vh-100 container-fluid position-absolute align-items-center justify-content-center ">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 3 }}
-            className="d-inline-block">
+            transition={{ duration: 2 }}
+            className="d-inline-block"
+            >
             <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />  
           </motion.div>
           
@@ -59,8 +54,11 @@ function PaginaInicial() {
           className="overflow-hidden"
           initial={{transform:'translate(1000px)'}}
           animate={{transform:'translate(0px)'}}
-          transition={{delay:3, duration:1}}>
-            <Button text='Delivery' className='mt-5 main-bold-font fs-5 d-block py-1 px-1 border-0 delivery-button' />
+          transition={{delay:2, duration:1}}>
+            <Button
+            style={{zIndex:3}} 
+            text='Delivery' 
+            className='mt-5 main-bold-font fs-5 d-block py-1 px-1 delivery-button' />
           </motion.div>
         
         </div>
@@ -85,7 +83,7 @@ function PaginaInicial() {
           <p>não me espere pro jantar,..."</p>
         </div>
         <div className="container d-flex justify-content-center">
-          <Button className="main-bold-font rounded mt-5 py-2 px-4 fs-5 fw-bold delivery-button" text="Delivery" />
+          <Button className="main-bold-font mt-5 py-2 px-4 fs-5 fw-bold delivery-button" text="Delivery" />
         </div>
       </AnimatedBanner >
       <Equipe/>
