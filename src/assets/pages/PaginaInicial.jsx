@@ -17,16 +17,16 @@ import food6 from '../images/food/food6.jpg';
 
 const images = [
   {
-    image: food3, 
-    text:'Beber e não ter a vergonha de ser feliz ...'
-  },{
-    image:food4,
-    text:'Cantar e Cantar e Cantar a beleza de ser um eterno infeliz ...'
-  },{
-    image:food5,
-    text:'Não tem comida ...'
-  },{
-    image:food6,
+    image: food3,
+    text: 'Beber e não ter a vergonha de ser feliz ...'
+  }, {
+    image: food4,
+    text: 'Cantar e Cantar e Cantar a beleza de ser um eterno infeliz ...'
+  }, {
+    image: food5,
+    text: 'Não tem comida ...'
+  }, {
+    image: food6,
     text: 'Serio, não tem...'
   }
 ];
@@ -34,10 +34,10 @@ const images = [
 
 function PaginaInicial() {
   return (
-    <section className="overflow-hidden">
-      <div id="topo" className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>        
+    <section className="page overflow-hidden">
+      <div id="topo" className='d-flex flex-column position-relative min-vh-100' style={{ zIndex: 0 }}>
         <div className="background-parallax container-fluid position-absolute grayscale"
-          style={{ backgroundImage: `url(${BackgroundImage})`}}>
+          style={{ backgroundImage: `url(${BackgroundImage})` }}>
         </div>
 
         <div className="overflow-hidden d-flex flex-column min-vh-100 container-fluid position-absolute align-items-center justify-content-center ">
@@ -46,25 +46,25 @@ function PaginaInicial() {
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
             className="d-inline-block"
-            >
-            <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />  
+          >
+            <LogoShadow className="LogoHero me-auto" color={'#ffffff'} />
           </motion.div>
-          
+
           <motion.div
-          className="overflow-hidden"
-          initial={{transform:'translate(1000px)'}}
-          animate={{transform:'translate(0px)'}}
-          transition={{delay:2, duration:1}}>
+            className="overflow-hidden"
+            initial={{ transform: 'translate(1000px)' }}
+            animate={{ transform: 'translate(0px)' }}
+            transition={{ delay: 2, duration: 1 }}>
             <Button
-            style={{zIndex:3}} 
-            text='Delivery' 
-            className='mt-5 main-bold-font fs-5 d-block py-1 px-1 delivery-button' />
+              style={{ zIndex: 3 }}
+              text='Delivery'
+              className='mt-5 main-bold-font fs-5 d-block py-1 px-1 delivery-button' />
           </motion.div>
-        
+
         </div>
       </div>
 
-      <Apresentacao/> 
+      <Apresentacao />
       <AnimatedGallery id="galery" images={images} />
 
       <AnimatedBanner>
@@ -86,7 +86,7 @@ function PaginaInicial() {
           <Button className="main-bold-font mt-5 py-2 px-4 fs-5 fw-bold delivery-button" text="Delivery" />
         </div>
       </AnimatedBanner >
-      <Equipe/>
+      <Equipe />
       <Contato />
     </section >
   );

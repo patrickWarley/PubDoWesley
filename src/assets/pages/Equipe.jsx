@@ -1,30 +1,30 @@
 import teamImage from '../images/team.png'
 import { motion } from 'framer-motion';
 
-const changeOpacity ={
+const changeOpacity = {
   visible: {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      delayChildren:1,
-      duration: 1, 
+      delayChildren: 2,
+      duration: 1,
     },
   },
-  hidden:{
-    opacity:0
+  hidden: {
+    opacity: 0
   }
 }
 
-const heroEntry ={
-  visible:order =>({
-    transform:"translate(0px)",
-    transition:{
-      delay:order*0.5,
-      duration:0.5
+const heroEntry = {
+  visible: order => ({
+    transform: "translate(0px)",
+    transition: {
+      delay: order * 0.5,
+      duration: 0.5
     }
   }),
-  hidden:{
-    transform:"translate(1000px)"
+  hidden: {
+    transform: "translate(1000px)"
   }
 }
 
@@ -42,13 +42,13 @@ function Equipe() {
     <motion.div
       initial="hidden"
       whileInView={"visible"}
-      viewport={{once:true}}
-      amount={0.5}
+      viewport={{ once: true, amount: 0.3 }}
       variants={changeOpacity}
-      className="container-fluid d-flex justify-content-center bg-dark row overflow-hidden m-0">
-      <a id="quemsomos" className="anchor" style={{paddingTop:'100px', marginTop:'-100px'}}></a>
+      className="container-fluid d-flex justify-content-center bg-dark row overflow-hidden m-0"
+    >
+      <a id="quemsomos" className="anchor" style={{ paddingTop: '100px', marginTop: '-100px' }}></a>
       <div className="text-center light-text p-5 fw-bolder main-title secondary-font">
-          Nosso time!
+        Nosso time!
       </div>
       <div className="col-12 team-grid ">
         {
@@ -65,7 +65,7 @@ function Equipe() {
                   <li className="nav-item p-2"><a className="text-decoration-none light-text " href={member.linkedin}><i className=" link-redes fa-brands fa-linkedin" /></a></li>
                   <li className="nav-item p-2"><a className="text-decoration-none light-text " href={member.github}><i className=" link-redes fa-brands fa-github"></i></a></li>
                 </ul>
-              
+
               </div>
             </motion.div>
           ))
