@@ -9,7 +9,7 @@
   --shade-3: #8D5535;
   --light-4: #d49774;
   --light-5: #d17038;
-  --shade-3-transparency: rgb(141, 85, 53, 0.8);
+  --shade-3-transparency: rgb(141, 85, 53, 0.9);
 
 
 }
@@ -86,8 +86,14 @@ nav.bg-light {
   background-color: var(--shade-3-transparency) !important;
 }
 
+@media(max-width:900px) {
+  nav.bg-light {
+    background-color: var(--shade-3) !important;
+  }
+}
+
 nav.navbar {
-  max-height: 200px !important;
+  max-height: 100vh !important;
   transition: max-height 1s ease-in-out;
 }
 
@@ -310,4 +316,74 @@ nav .nav-tabs .active {
 
 .circle {
   border-radius: 50% !important;
+}
+
+/** Shopping Cart **/
+.offcanvaspub.offcanvaspub-end {
+  top: 0;
+  right: 0;
+  width: var(--bs-offcanvas-width);
+  border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+  transform: translateX(100%);
+}
+
+.offcanvaspub {
+  position: fixed;
+  bottom: 0;
+  z-index: var(--bs-offcanvas-zindex);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: var(--bs-offcanvas-color);
+  visibility: hidden;
+  background-color: var(--bs-offcanvas-bg);
+  background-clip: padding-box;
+  outline: 0;
+  transition: transform .3s ease-in-out;
+}
+
+.offcanvaspub,
+.offcanvaspub-lg,
+.offcanvaspub-md,
+.offcanvaspub-sm,
+.offcanvaspub-xl,
+.offcanvaspub-xxl {
+  --bs-offcanvas-zindex: 1045;
+  --bs-offcanvas-width: 400px;
+  --bs-offcanvas-height: 30vh;
+  --bs-offcanvas-padding-x: 1rem;
+  --bs-offcanvas-padding-y: 1rem;
+  --bs-offcanvas-color: ;
+  --bs-offcanvas-bg: #fff;
+  --bs-offcanvas-border-width: 1px;
+  --bs-offcanvas-border-color: var(--bs-border-color-translucent);
+  --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.offcanvaspub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+}
+
+.offcanvaspub-body {
+  flex-grow: 1;
+  padding: var(--bs-offcanvas-padding-y) var(--bs-offcanvas-padding-x);
+  overflow-y: auto;
+}
+
+.offcanvaspub.show:not(.hiding),
+.offcanvaspub.showing {
+  transform: none;
+}
+
+.offcanvaspub.hiding,
+.offcanvaspub.show,
+.offcanvaspub.showing {
+  visibility: visible;
+}
+
+.bg-shopping-cart {
+  background-color: var(--shade-2);
 }

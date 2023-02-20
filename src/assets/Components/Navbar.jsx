@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import LogoShadow from "./Logo/LogoShadow";
-
 import UserMenu from "./UserMenu";
 function Navbar() {
   const myRef = useRef(null);
@@ -21,13 +19,13 @@ function Navbar() {
 
   }
 
+
   useEffect(() => {
     window.document.addEventListener('scroll', handleScroll);
-    //get the offset and save it 
   }, []);
 
   return (
-    <nav className={` main-bold-font navbar navbar-expand-lg navbar-dark bg-light p-0 position-fixed w-100`}
+    <nav className={` main-bold-font navbar navbar-expand-lg navbar-dark bg-light p-3 position-fixed w-100`}
       style={{ zIndex: 99999, boxShadow: "10px 2px 5px 0px rgba(0,0,0,0.75)" }}
       ref={myRef}
     >
@@ -35,22 +33,24 @@ function Navbar() {
         <div className="d-flex col justify-content-between order-1">
           <Link className="navbar-brand" to={'/'}>
             <div className="">
-              <LogoShadow className="LogoNavbar" color={'#ffffff'} />
+              Pub Do Wesley
             </div>
           </Link>
         </div>
 
-        <div className="collapse navbar-collapse justify-content-center col order-3 order-lg-2" id="navbarSupportedContent">
+        <div
+          className="collapse navbar-collapse justify-content-center col order-3 order-lg-2"
+          id="navbarSupportedContent">
           <ul className="d-flex navbar-nav mt-5 mt-lg-0 mb-2 mb-lg-0 align-items-center bigger-text wood-text">
 
             <div className="d-lg-flex">
               <li className="nav-item m-2">
                 {
-                  location.pathname !=='/'?
+                  location.pathname !== '/' ?
                     <Link className="nav-link fs-5 fw-bolder" to={'/#topo'}> Home </Link>
                     :
                     <a href="#topo" className="nav-link fs-5 fw-bolder">Home </a>
-                 }
+                }
               </li>
 
               <li className="nav-item m-2">
@@ -81,10 +81,10 @@ function Navbar() {
         <div className="col order-2 order-lg-3 d-flex justify-content-end">
           <ul className="d-flex flex-row align-items-center navbar-nav">
 
-            <li className="nav-item px-2">
+            <li className="nav-item">
             </li>
 
-            <li className="nav-item px-4">
+            <li className="nav-item">
               <UserMenu />
             </li>
 

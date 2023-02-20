@@ -42,7 +42,7 @@ function Equipe() {
     <motion.div
       initial="hidden"
       whileInView={"visible"}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={changeOpacity}
       className="container-fluid d-flex justify-content-center bg-dark row overflow-hidden m-0"
     >
@@ -56,7 +56,7 @@ function Equipe() {
             <motion.div
               custom={i}
               variants={heroEntry}
-              className="card-equipe m-5 m-md-3">
+              className="card-equipe m-0 mb-5 m-md-3 ">
 
               <div className='image-equipe' style={{}}> <img src={member.imagem} className="image-shadow circle" /></div>
               <div className="rounded links position-relative" style={{ zIndex: 1 }} >

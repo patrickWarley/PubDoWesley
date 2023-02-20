@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import './Products.css'
 import axios from 'axios';
 import ProductGrid from '../Components/ProductGrid';
+import { addToShoppingCart } from './ShoppingCart';
 
 function Products() {
   const [cervejas, setCervejas] = useState(null);
@@ -46,7 +47,7 @@ function Products() {
         <h1 className='wood-text header-titulo fw-bolder mb-3'>Escolha seu veneno</h1>
       </div>
       <div className="products-list">
-        <ProductGrid products={cervejas} title={'Cervejas'} />
+        <ProductGrid products={cervejas} title={'Cervejas'} onClick={addToShoppingCart} />
         <ProductGrid products={destilados} title={'Destilados'} />
         <ProductGrid products={coqueteis} title={'Coqueteis'} />
       </div >

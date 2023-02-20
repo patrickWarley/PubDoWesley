@@ -38,19 +38,19 @@ function Loading({ isVisible }) {
           animate='visible'
           exit='hidden'
           variants={changeOpacity}
-          className="container text-center align-items-center justify-content-center vw-100 light-text">
+          className="container text-center align-items-center justify-content-center w-100 light-text">
 
           <motion.div variants={heroEntry} custom={1} style={{ display: 'inline-block' }}>
-            <i class="fa-solid fa-wine-glass-empty fa-4x m-5" ></i>
+            <i class="fa-solid fa-wine-glass-empty fa-lg mx-3 m-md-5" ></i>
           </motion.div>
           <motion.div variants={heroEntry} custom={2} style={{ display: 'inline-block' }}>
-            <i class="fa-solid fa-champagne-glasses fa-4x m-5"></i>
+            <i class="fa-solid fa-champagne-glasses fa-lg mx-3 m-md-5"></i>
           </motion.div>
           <motion.div variants={heroEntry} custom={3} style={{ display: 'inline-block' }}>
-            <i class="fa-solid fa-martini-glass-citrus fa-4x m-5"></i>
+            <i class="fa-solid fa-martini-glass-citrus fa-lg mx-3 m-md-5"></i>
           </motion.div>
           <motion.div variants={heroEntry} custom={4} style={{ display: 'inline-block' }}>
-            <i class="fa-solid fa-wine-bottle fa-4x m-5" ></i>
+            <i class="fa-solid fa-wine-bottle fa-lg mx-3 m-md-5" ></i>
           </motion.div>
         </motion.div>
       )
