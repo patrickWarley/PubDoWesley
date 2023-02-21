@@ -387,3 +387,15 @@ nav .nav-tabs .active {
 .bg-shopping-cart {
   background-color: var(--shade-2);
 }
+
+.qtd-button:hover,
+.qtd-button:active {
+  background-color: var(--light-4) !important;
+}
+
+.shop-cart-info {
+  background-color: var(--shade-2);
+  box-shadow: 5px 5px 5px var(--dark-background);
+  text-shadow: 5px 5px 5px var(--dark-background);
+  ;
+}

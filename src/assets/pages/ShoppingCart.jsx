@@ -37,10 +37,26 @@ export function addToShoppingCart(product) {
   notify();
 }
 
-export function removeFromShoppingCart(productId) {
+export function subtractFromShoppingCart(nome) {
   let shopCart = getShoppingcart();
-  shopCart = shopCart.filter(product => product.id !== productId);
+
+  let productIndex = shopCart.findIndex(productCart => productCart.nome === nome);
+
+  if (productIndex > -1)
+    if ((--shopCart[productIndex].qtdCart) <= 0) shopCart.splice(productIndex, 1);
+
   saveShopCart(shopCart);
+  notify();
+}
+
+function removeFromShoppingCart(nome) {
+  let shopCart = getShoppingcart();
+
+  let productIndex = shopCart.findIndex(productCart => productCart.nome === nome);
+  shopCart.splice(productIndex, 1);
+
+  saveShopCart(shopCart);
+  notify();
 }
 
 function ShoppingCart() {
@@ -52,6 +68,24 @@ function ShoppingCart() {
 
     setQtd(cart.reduce((acc, curr) => acc += curr.qtdCart, 0));
     setShoppingCart(cart)
+  }
+
+  function extractPrice(preco) {
+    let price = preco.split(' ');
+    return parseInt(price[1]);
+  }
+
+  function calcTotal() {
+    let total = 0;
+
+    if (shoppingCart.length !== 0) {
+      total = shoppingCart.reduce((acc, curr) => acc += extractPrice(curr.preco) * curr.qtdCart, 0);
+    }
+
+    console.log(total)
+
+    return Intl.NumberFormat('en-US', { style: 'currency', currency: 'BRL' })
+      .format(total);
   }
 
   useEffect(() => {
@@ -80,8 +114,8 @@ function ShoppingCart() {
         id="shopCartOffCanvas"
         aria-labelledby="shopCartOffCanvasLabel"
       >
-        <div className="offcanvaspub-header">
-          <h5 id="shopCartOffCanvasLabel">Carrinho de compras</h5>
+        <div className="offcanvaspub-header fs-3">
+          <span id="shopCartOffCanvasLabel" className=" p-3">Meu Carrinho</span>
           <button
             type="button"
             className="btn-close btn-close-white text-reset"
@@ -90,20 +124,54 @@ function ShoppingCart() {
             aria-label="Close"
           />
         </div>
-        <div class="offcanvaspub-body">
+        <div class="offcanvaspub-body d-flex flex-column">
           <div>
             {shoppingCart.length > 0 ? (
               shoppingCart.map(
                 product => (
                   <div>
-                    <div className="row m-1 p-3 bg-shopping-cart " style={{ boxShadow: '5px 5px 2px 0px rgba(0,0,0,0.75)' }}>
-                      <div className="col">
+                    <div
+                      className="row m-1 p-3 bg-shopping-cart "
+                      style={{ boxShadow: '5px 5px 2px 0px rgba(0,0,0,0.75)' }}>
+                      <div className="col  d-flex align-items-center justify-content-center1">
                         <img src={product.imagem} style={{ width: '100px' }} />
                       </div>
-                      <div className="col">
-                        <p>{product.nome}</p>
-                        <span className="d-block">Quantidade : {product.qtdCart}</span>
-                        <span>{product.preco}</span></div>
+                      <div className="col position-relative ">
+                        <span className="position-absolute d-inline-block" style={{ top: '0px', right: '0px' }}>
+                          <a onClick={() => removeFromShoppingCart(product.nome)}>X</a>
+                        </span>
+                        <span>{product.nome}</span><br />
+                        <span>{product.preco}</span>
+                        <div>
+                          Quantidade :
+                          <div className="position-relative d-flex">
+                            <button
+                              className=" qtd-button p-0 px-2 border-0 d-inline-block bg-dark light-text"
+                              style={{ borderRadius: '0' }}
+                              onClick={() => addToShoppingCart(product)}>
+                              +
+                            </button>
+                            <input
+                              type="number"
+                              step={1}
+                              min={0}
+                              value={product.qtdCart}
+                              className="w-25 text-center bg-dark light-text border border-0 d-inline"
+                              readOnly
+                            />
+                            <button
+                              className=" qtd-button p-0 px-2 border-0 d-inline-block bg-dark light-text"
+                              style={{ borderRadius: '0' }}
+                              onClick={() => {
+                                subtractFromShoppingCart(product.nome)
+                              }
+                              }
+                            >
+                              -
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )
@@ -112,6 +180,19 @@ function ShoppingCart() {
               <h1>Nenhum produto adicionado ainda!</h1>
             )
             }
+          </div>
+          <div className="d-flex m-1 row justify-content-center mt-auto">
+            <div className="col-12 shop-cart-info px-5 py-3">
+              <div className="fs-2 w-100 d-flex align-items-center justify-content-between">
+                <span>Total:</span><span>{calcTotal()}</span>
+              </div>
+              <div className="fs-4 w-100 d-flex justify-content-between">
+                <span>Frete:</span> <span>GRÁTIS</span>
+              </div>
+              <div className="fs-5 w-100 mt-4 d-flex justify-content-center">
+                <button>Finalizar Compra</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

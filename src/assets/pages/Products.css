@@ -91,10 +91,18 @@ div button {
   border-radius: 6px;
   border-color: grey;
   background-color: orange;
-  padding: 1em;
+  padding: 0.5em;
   color: black;
   font-weight: bold;
 }
+
+div button:hover {
+  background-color: var(--dark-background) !important;
+  color: var(--light-text);
+  transition: all ease-in-out 2s;
+}
+
+div button:active {}
 
 .header-produtos {
   min-height: 300px;
