@@ -48,8 +48,8 @@ function Products() {
       </div>
       <div className="products-list">
         <ProductGrid products={cervejas} title={'Cervejas'} onClick={addToShoppingCart} />
-        <ProductGrid products={destilados} title={'Destilados'} />
-        <ProductGrid products={coqueteis} title={'Coqueteis'} />
+        <ProductGrid products={destilados} title={'Destilados'} onClick={addToShoppingCart} />
+        <ProductGrid products={coqueteis} title={'Coqueteis'} onClick={addToShoppingCart} />
       </div >
     </div>
   );
