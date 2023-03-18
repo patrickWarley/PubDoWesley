@@ -35,9 +35,9 @@ function Products() {
 
   useEffect(() => {
     getCervejas();
-    //getCoqueteis();
-    //getDestilados();
-    //getRefeicoes();
+    getCoqueteis();
+    getDestilados();
+    getRefeicoes();
   }, [])
 
 
